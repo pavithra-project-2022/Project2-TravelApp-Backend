@@ -7,7 +7,9 @@ const pinRoute = require("./routes/pins");
 const cors = require("cors")
 
 dotenv.config();
-app.use(cors())
+app.use(cors({
+  origin: "*",
+}))
 
 app.use(express.json());
 
@@ -15,6 +17,7 @@ mongoose
  .connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        
           })   
  .then(() => console.log("MongoDB connected!"))
  .catch(err => console.log(err));
@@ -22,6 +25,6 @@ mongoose
 app.use("/api/users", userRoute);
 app.use("/api/pins", pinRoute);
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log("Backend server is running!");
 });
