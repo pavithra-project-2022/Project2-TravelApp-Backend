@@ -12,7 +12,7 @@ app.use(cors({
 }))
 
 app.use(express.json());
-const URL = "mongodb+srv://pavi:pavi@cluster0.ydkuj.mongodb.net/mapapp?retryWrites=true&w=majority";
+// const URL = "mongodb+srv://pavi:pavi@cluster0.ydkuj.mongodb.net/mapapp?retryWrites=true&w=majority";
 
 
 app.get("/", (req, res) => {
@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 
 
 mongoose 
- .connect(URL, {
+ .connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         
