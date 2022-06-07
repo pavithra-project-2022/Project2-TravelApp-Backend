@@ -12,7 +12,7 @@ app.use(cors({
 }))
 
 app.use(express.json());
-const URL = "mongodb+srv://pavi:pavi@cluster0.ydkuj.mongodb.net/mapapp?retryWrites=true&w=majority"
+const URL = "mongodb+srv://pavi:pavi@cluster0.ydkuj.mongodb.net/mapapp?retryWrites=true&w=majority";
 
 
 app.get("/", (req, res) => {
