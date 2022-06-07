@@ -20,8 +20,7 @@ app.get("/", (req, res) => {
 });
 
 
-mongoose 
- .connect(URL, {
+mongoose.connect(URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         
