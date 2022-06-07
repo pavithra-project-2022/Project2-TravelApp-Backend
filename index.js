@@ -11,9 +11,9 @@ dotenv.config();
 app.use(cors())
 
 app.use(express.json());
-const URL = "mongodb+srv://pavi:pavi@cluster0.ydkuj.mongodb.net/mapapp?retryWrites=true&w=majority"
+const URI = "mongodb+srv://pavi:pavi@cluster0.ydkuj.mongodb.net/mapapp?retryWrites=true&w=majority";
 mongoose 
- .connect(URL, {
+ .connect(URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
           })   
