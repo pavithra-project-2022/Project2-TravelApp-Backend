@@ -12,7 +12,7 @@ app.use(cors({
 }))
 
 app.use(express.json());
-const URL = "mongodb+srv://pavi:<password>@cluster0.ddyxg.mongodb.net/travelapp?retryWrites=true&w=majority";
+const URL = "mongodb+srv://pavi:pavi@cluster0.ydkuj.mongodb.net/mapapp?retryWrites=true&w=majority";
 
 
 app.get("/", (req, res) => {
@@ -32,7 +32,7 @@ mongoose
 app.use("/api/users", userRoute);
 app.use("/api/pins", pinRoute);
 
-var port = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
   console.log(`Backend server is running at ${port}!`);
